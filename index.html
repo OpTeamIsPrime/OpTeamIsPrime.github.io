@@ -10,6 +10,27 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
+		<script src=
+				"https://smtpjs.com/v3/smtp.js">
+		</script>
+
+		<script type="text/javascript">
+			function sendEmail() {
+				Email.send({
+					
+					Host: "smtp.gmail.com",
+					Username: "sacha.marty12@gmail.com",
+					Password: "1212lmsf1212",
+					To: 'sacha.marty12@gmail.com',
+					From: "sacha.marty12@gmail.com",
+					Subject: "tott",
+					Body: "noel",
+				})
+						.then(function (message) {
+							alert("mail sent successfully")
+						});
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -116,6 +137,8 @@
 									<p>Vous souhaitez en apprendre plus sur le projet et ses objectifs, téléchargez le cahier des charges ci-dessous</p>
 									<p>&emsp;&emsp;<a href="telechargement.html" class="button">Télécharger</a></p><br>
 								</section>
+							</div>
+						</div>	
 					</section>
 
 				<!-- Three -->
@@ -130,19 +153,30 @@
 											<div class="field half">
 												<label for="name">Nom Prénom</label>
 												<input type="text" name="name" id="nom" />
+												<script type="text/javascript">
+													var textnom = document.getElementById('nom').textContent;
+													//alert(textnom);
+												</script>
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
 												<input type="text" name="email" id="email" />
+												<script type="text/javascript">
+													var textemail = document.getElementById('email').textContent;
+													//alert(textemail);
+												</script>
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
 												<textarea name="message" id="message" rows="5"></textarea>
+												<script type="text/javascript">
+													var textmessage = document.getElementById('message').textContent;
+													//alert(textmessage);
+												</script>
 											</div>
 										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Envoyer</a></li>
-										</ul>
+										<input type="button" value="Envoyer"
+											   onclick="sendEmail()" />
 									</form>
 								</section>
 								<section>
