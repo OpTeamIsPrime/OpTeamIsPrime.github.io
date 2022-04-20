@@ -1,4 +1,4 @@
-Hyperspace by Benjamin Boyer
+jjHyperspace by Benjamin Boyer
 
 
 
