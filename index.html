@@ -14,8 +14,8 @@
 				"https://smtpjs.com/v3/smtp.js">
 		</script>
 		<!--
-		<script src="assets/js/index.js"></script>
-		-->
+		
+		
 		<script type="text/javascript">
 			function sendEmail() {
 				Email.send({
@@ -30,7 +30,7 @@
 						});
 			}
 		</script>
-	
+		-->
 	</head>
 	<body class="is-preload">
 
@@ -152,26 +152,27 @@
 										<div class="fields">
 											<div class="field half">
 												<label for="nom">Nom Prénom</label>
-												<input type="text" name="name" id="nom" />
+												<input class="Name" type="text" name="name" id="nom" />
+												<!--
 												<script type="text/javascript">
-													var textnom = document.getElementById('nom').value;
-													//alert(textnom);
+													var textnom = document.querySelector('nom').value;
+													alert(textnom);
 												</script>
+												-->
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
+												<input class="Email" type="text" name="email" id="email" />
 												<script type="text/javascript">
-													var textemail = document.getElementById('email').value;
-													//alert(textemail);
+													
+													
 												</script>
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
+												<textarea class="Message" name="message" id="message" rows="5"></textarea>
 												<script type="text/javascript">
-													var textmessage = document.getElementById('message').value;
-													//alert(textmessage);
+													
 												</script>
 											</div>
 										</div>
@@ -230,6 +231,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			var textnom = document.querySelector('.Nom');
+			var textemail = document.querySelector('.Email');
+			var textmessage = document.querySelector('.Message');
+
+			function sendEmail() {
+				Email.send({
+					SecureToken : "a5cb142e-c243-473c-94eb-a981cec35ea5",
+					To: 'opteamisprime@gmail.com',
+					From:'opteamisprime@gmail.com' ,
+					Subject: "abc",
+					Body: textmessage,
+				})
+						.then(function (message) {
+							alert("mail sent successfully")
+						});
+			}
+		</script>
 
 	</body>
 </html>
