@@ -2,7 +2,7 @@
 <!--
 	By Benjamin Boyer & Sacha Marty
 -->
-<html>
+<html lang="">
 	<head>
 		<title>OpTeamIsPrime Site</title>
 		<meta charset="utf-8" />
@@ -14,15 +14,15 @@
 				"https://smtpjs.com/v3/smtp.js">
 		</script>
 
+		<script src="assets/js/index.js"></script>
+	
 		<script type="text/javascript">
 			function sendEmail() {
 				Email.send({
-					
-					Host: "smtp.gmail.com",
-					Username: "sacha.marty12@gmail.com",
-					Password: "1212lmsf1212",
-					To: 'sacha.marty12@gmail.com',
-					From: "sacha.marty12@gmail.com",
+
+					SecureToken : "f66c96da-3112-4c9e-96b8-ee9781e5fdda",
+					To: 'opteamisprime@gmail.com',
+					From: "opteamisprime@gmail.com",
 					Subject: "tott",
 					Body: "noel",
 				})
@@ -31,6 +31,7 @@
 						});
 			}
 		</script>
+	
 	</head>
 	<body class="is-preload">
 
@@ -151,7 +152,7 @@
 									<form method="post" action="contacte.cs">
 										<div class="fields">
 											<div class="field half">
-												<label for="name">Nom Prénom</label>
+												<label for="nom">Nom Prénom</label>
 												<input type="text" name="name" id="nom" />
 												<script type="text/javascript">
 													var textnom = document.getElementById('nom').textContent;
