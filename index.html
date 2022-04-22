@@ -133,28 +133,15 @@
 										<div class="fields">
 											<div class="field half">
 												<label for="nom">Nom Prénom</label>
-												<input class="Name" type="text" name="name" id="nom" />
-												<!--
-												<script type="text/javascript">
-													var textnom = document.querySelector('nom').value;
-													alert(textnom);
-												</script>
-												-->
+												<input  type="text" name="name" id="nom" />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input class="Email" type="text" name="email" id="email" />
-												<script type="text/javascript">
-													
-													
-												</script>
+												<input  type="text" name="email" id="email" />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea class="Message" name="message" id="message" rows="5"></textarea>
-												<script type="text/javascript">
-													
-												</script>
+												<textarea  name="message" id="message" rows="5"></textarea>
 											</div>
 										</div>
 										<input type="button" value="Envoyer"
@@ -213,9 +200,9 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script type="text/javascript">
-			var textnom = document.querySelector('.Nom');
-			var textemail = document.querySelector('.Email');
-			var textmessage = document.querySelector('.Message');
+			var textnom = document.getElementsByName('name').values();
+			var textemail = document.getElementsByName('email').values();
+			var textmessage = document.getElementsByName('message').values();
 
 			function sendEmail() {
 				Email.send({
@@ -223,7 +210,7 @@
 					To: 'opteamisprime@gmail.com',
 					From:'opteamisprime@gmail.com' ,
 					Subject: "abc",
-					Body: textmessage.value,
+					Body: textmessage,
 				})
 						.then(function (message) {
 							alert("mail sent successfully")
