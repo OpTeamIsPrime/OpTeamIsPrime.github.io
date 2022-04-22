@@ -9,28 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
 		<script src=
 				"https://smtpjs.com/v3/smtp.js">
 		</script>
-		<!--
-		
-		
-		<script type="text/javascript">
-			function sendEmail() {
-				Email.send({
-					SecureToken : "a5cb142e-c243-473c-94eb-a981cec35ea5",
-					To: 'opteamisprime@gmail.com',
-					From:'opteamisprime@gmail.com' ,
-					Subject: "abc",
-					Body: textmessage,
-				})
-						.then(function (message) {
-							alert("mail sent successfully")
-						});
-			}
-		</script>
-		-->
 	</head>
 	<body class="is-preload">
 
@@ -242,7 +223,7 @@
 					To: 'opteamisprime@gmail.com',
 					From:'opteamisprime@gmail.com' ,
 					Subject: "abc",
-					Body: textmessage,
+					Body: textmessage.value,
 				})
 						.then(function (message) {
 							alert("mail sent successfully")
