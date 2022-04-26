@@ -137,7 +137,7 @@
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input  class="mail" type="text" name="Email" id="email" />
+												<input  class="mail" type="email" name="Email" id="email" />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
@@ -200,8 +200,8 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script type="text/javascript">
-			const textnom = document.getElementById('.nm'),
-			 	  textemail = document.getElementById('.mail'),
+			const textnom = document.querySelector('.nm'),
+			 	  textemail = document.querySelector('.mail'),
 			 	  textmessage = document.querySelector('.msg');
 
 			function sendEmail() {
