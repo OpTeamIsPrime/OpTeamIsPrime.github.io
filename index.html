@@ -133,15 +133,15 @@
 										<div class="fields">
 											<div class="field half">
 												<label for="nom">Nom Prénom</label>
-												<input  type="text" name="name" id="nom" />
+												<input  type="text" name="Name" id="nom" />
 											</div>
 											<div class="field half">
 												<label for="email">Email</label>
-												<input  type="text" name="email" id="email" />
+												<input  type="text" name="Email" id="email" />
 											</div>
 											<div class="field">
 												<label for="message">Message</label>
-												<textarea  name="message" id="message" rows="5"></textarea>
+												<textarea  name="Message" id="message" rows="5"></textarea>
 											</div>
 										</div>
 										<input type="button" value="Envoyer"
@@ -200,9 +200,9 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script type="text/javascript">
-			var textnom = document.getElementsByName('name').values();
-			var textemail = document.getElementsByName('email').values();
-			var textmessage = document.getElementsByName('message').values();
+			var textnom = document.getElementById("nom").values();
+			var textemail = document.getElementById("email").values();
+			var textmessage = document.getElementById("message").values();
 
 			function sendEmail() {
 				Email.send({
