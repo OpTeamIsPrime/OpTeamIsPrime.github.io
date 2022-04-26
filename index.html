@@ -208,8 +208,8 @@
 				Email.send({
 					SecureToken : "a5cb142e-c243-473c-94eb-a981cec35ea5",
 					To: 'opteamisprime@gmail.com',
-					From:textemail.value ,
-					Subject: textnom.value,
+					From: 'opteamisprime@gmail.com'  ,
+					Subject: textnom.value + "de " + textemail.value,
 					Body: textmessage.value,
 				})
 						.then(function (message) {
