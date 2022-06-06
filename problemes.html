@@ -31,9 +31,26 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Problemes et Solutions</h1>
-							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
-							<h5>Nous faisons ici la liste des problèmes que nous avons rencontrés ainsi que des solustions que nous y avons apportées :</h5><br>
-							<p>"a compléter au fur a mesure"</p>
+							<h5>Nous faisons ici la liste des problèmes que nous avons rencontrés ainsi que des solutions que nous y avons apportées :</h5><br>
+							<h2>-Bibliothèque Firmata :</h2>
+							<p>Nous avions tout d’abord fait le choix de faire notre projet en c# grâce à la bibliothèque Firmata qui permettait de communiquer avec la carte arduino en c#. Cependant nous nous sommes rendu compte que certaines fonctions n'étaient pas présentes. L’une d’entre elles était associée au capteur ultrason qui est une élément essentiel au bon fonctionnement de notre robot. Nous avons donc finalement dû utiliser directement de l’Arduino afin de mener notre projet à terme.
+							</p>
+
+							<h2>-Livraison des pièces :</h2>
+							<p>Pour réaliser notre robot nous avons dû commander des pièces en ligne. Cependant la livraison de certaines de ces pièces a pris jusqu'à un mois, aussi nous avons été retardés dans notre projet.
+							</p>
+
+							<h2>-Mauvaise qualité des composants :</h2>
+							<p>Les essais des moteurs du robot ont révélé des fragilités au niveau des fils qui leur sont reliés. En effet, ces fils se détachent très facilement au moindre choc.
+								En conséquence nous avons dû ressouder l’ensemble des fils aux quatres moteurs.</p>
+
+							<h2>-Problèmes avec l’ESP8266-01S :</h2>
+							<p>
+								La communication à distance a été envisagé et jugé possible grâce au module esp8266-01s. Cependant aucun membre du groupe n'avait de connaissance en réseau nous avons donc dû faire de nombreuses recherches sur ce module, a commencer par les vidéos et les documentations.
+							Ce module permet de gérer deux différents protocoles : IP et Https le protocole TCP. Le protocole TCP permet de rassembler les différents paquets qui sont envoyés par le client ou le serveur. 
+							Avec tout ce qui a été vu sur internet nous avons pu avoir une première idée de comment fonctionné le module. 			
+							Le module a différentes manières d'être paramétré, il peut avoir des paramètres de base ou non, tout dépend de quel module on dispose.				
+							Dans notre cas, le module doit être paramétré dans l’IDE arduino via des commandes AT dans le Serial Monitor. </p>
 						</div>
 					</section>
 
